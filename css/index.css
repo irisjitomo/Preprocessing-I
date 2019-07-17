@@ -158,34 +158,47 @@ div {
   width: 90%;
   margin: auto;
 }
+@media (max-width: 500px) {
+  .container {
+    width: 95%;
+  }
+}
 section {
   padding: 15px;
 }
 /*variables and mixins start*/
 /* variables and mixines end*/
 header {
-  background: #a0bf9b;
+  background: white;
   border: 1px solid white;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 header nav {
-  background-color: #a0bf9b;
+  background-color: white;
   margin: 20px 0;
+  padding: 20px;
   display: flex;
   justify-content: space-around;
 }
 @media (max-width: 500px) {
   header nav {
-    background: black;
     flex-direction: column;
+    align-items: center;
   }
 }
 header nav a {
-  color: white;
+  color: black;
+}
+@media (max-width: 500px) {
+  header nav a {
+    padding: 20px;
+    border-bottom: 1px solid black;
+  }
 }
 .topContent {
   padding: 15px;
   background: #a0bf9b;
+  margin-top: 40px;
 }
 .topContent .picAndName {
   display: flex;
@@ -193,26 +206,63 @@ header nav a {
   align-items: center;
   margin-bottom: 70px;
 }
+@media (max-width: 500px) {
+  .topContent .picAndName {
+    flex-direction: column;
+  }
+}
 .topContent img {
   width: 50%;
   height: auto;
   margin-left: 10px;
 }
+@media (max-width: 500px) {
+  .topContent img {
+    width: 95%;
+  }
+}
 .topContent .name {
   color: white;
   margin-left: 80px;
 }
+@media (max-width: 500px) {
+  .topContent .name {
+    width: 95%;
+    margin: 10px;
+    margin-top: 30px;
+  }
+}
 .topContent .name h1 {
   font-size: 2rem;
+}
+@media (max-width: 500px) {
+  .topContent .name h1 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+  }
 }
 .topContent .aboutMe {
   font-size: 1.4rem;
   color: white;
   margin: 20px;
 }
+@media (max-width: 500px) {
+  .topContent .aboutMe {
+    width: 95%;
+    margin: 10px;
+    font-size: 1rem;
+  }
+}
 .mainContent {
   background: #8c97a8;
   color: white;
+}
+@media (max-width: 500px) {
+  .mainContent .skillsList,
+  .mainContent .intro {
+    border-bottom: 2px solid white;
+  }
 }
 .bottomContent {
   background: #e3716b;
@@ -221,11 +271,15 @@ header nav a {
 .bottomContent .history {
   padding: 15px;
 }
+@media (max-width: 500px) {
+  .contact p {
+    border-bottom: 1px solid black;
+  }
+}
 footer {
   margin: 10px 0;
 }
 footer p {
-  border: 1px solid black;
   margin: 10px 0;
   text-align: center;
   padding: 10px;
