@@ -54,6 +54,131 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size:20px;
 }
 
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Literata', serif;
+    letter-spacing: 1px;
+	margin-bottom: 15px;
+	font-size:1.5rem;
+}
+
+p {
+	font-family: 'Raleway', sans-serif;
+}
+
+nav {
+	font-family: 'Raleway', sans-serif;
+}
+
+div{
+	margin:30px 20px;
+}
+
+.container {
+	width:90%;
+	margin:auto;
+}
+
+section{
+	padding:15px;
+}
+
+/*variables and mixins start*/
+
+
+@background-Color:#a0bf9b;
+
+@background-Color2:#8c97a8;
+
+@background-Color3:#e3716b;
+
+@text-color:white;
+
+.center(){
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+}
+
+/* variables and mixines end*/
+
+
+
+
+
+header{
+	background: @background-Color;
+	border:1px solid white;
+	margin:10px 0;
+		nav {
+		background-color: @background-Color;
+		margin:20px 0;
+		display:flex;
+		justify-content:space-around;
+			@media(max-width: 500px){
+				background:black;
+				flex-direction:column;
+			}
+		
+			a{
+			color:@text-color;
+			}
+	}
+}
+
+
+.topContent {
+	padding:15px;
+	background: @background-Color;
+
+		.picAndName{
+		.center();
+		margin-bottom:70px;
+		}
+
+		img{
+			width:50%;
+			height:auto;
+			margin-left:10px;
+		}
+
+		.name {
+			color:@text-color;
+			margin-left:80px;
+				h1{
+					font-size:2rem;
+				}
+		}
+		.aboutMe{
+			font-size:1.4rem;
+			color:@text-color;
+			margin:20px;
+		}
+}
+
+.mainContent{
+	background:@background-Color2;
+	color:@text-color;
+}
+
+.bottomContent{
+	background: @background-Color3;
+	color:@text-color;
+	.history{
+		padding:15px;
+	}
+}
+
+footer{
+	margin:10px 0;
+	p{
+		border:1px solid black;
+		margin:10px 0;
+		text-align:center;
+		padding:10px;
+	}
+}
